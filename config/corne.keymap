@@ -88,7 +88,7 @@
       &kp LC(LS(ESC)) &kp F1 &kp F2    &kp F3     &td0       &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp BSPC
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // |  CTRL    |          |  PREV    |  PLY PAUS|  NEXT    |          |   |          |          |          |  F11     |  F12     |  PRNTSCRN|
-      &kp LCTRL  &tran   s  &kp C_PREV &kp C_PP   &kp C_NEXT &trans         &trans     &trans     &trans     &kp F11    &kp F12    &kp PSCRN
+      &kp LCTRL  &trans     &kp C_PREV &kp C_PP   &kp C_NEXT &trans         &trans     &trans     &trans     &kp F11    &kp F12    &kp PSCRN
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // |  SHFT    |          |          |          |          |  ESC     |   |  BTC     |  BT1     |   BT2    |  BT3     |  BT4     |  SHFT    |
       &kp LSHFT  &trans     &trans     &trans     &trans     &kp ESC        &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp RSHFT
