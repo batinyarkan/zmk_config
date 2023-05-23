@@ -10,10 +10,10 @@
 
 / {
         conditional_layers {
-                compatible = "zmk, conditional_layers";
-                tri_layer {
-                        if-layers = <1 2>;
-                        then-layer = <3>;
+                compatible = "zmk,conditional-layers";
+                        tri_layer {
+                                if-layers = <1 2>;
+                                then-layer = <3>;
                 };
         };
 
@@ -81,7 +81,7 @@
 //                                  ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
                         >;
                 };
-                tri_layer {
+                adjust_layer {
                         bindings = <
 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
 // |  TASKMNG |  F1      |  F2      |  F3      |  F4      |  F5      |   |  F6      |  F7      |  F8      |  F9      |  F10     |  BKSP    |
