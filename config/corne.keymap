@@ -57,14 +57,14 @@
                   bindings = <&kp ESC>;
                   timeout-ms = <50>;
                   layers = <0>;
-                  key-positions = <15 16>;
+                  key-positions = <14 15 16>;
             };
 
             bksp {
                   bindings = <&kp BACKSPACE>;
                   timeout-ms = <50>;
                   layers = <0>;
-                  key-positions = <19 20>;
+                  key-positions = <19 20 21>;
             };
 
             del {
