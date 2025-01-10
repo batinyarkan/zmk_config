@@ -23,9 +23,6 @@
                   };
       };
 
-      behaviors {
-      };
-
       combos {
             compatible = "zmk,combos";
 
@@ -120,7 +117,7 @@
       &trans     &sk LCTRL  &trans     &kp TAB    &kp DEL    &trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT    &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // |          |  SHIFTst |  ALTst   |  TAB     |  GUIst   |          | |  HOME    |  PAGE_DWN|  PAGE_UP |  END     |  "       |          |
-      &trans     &sk LSHFT  &sk LALT   &kp TAB    &sk LGUI   &trans       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LSHFT(SQT) &trans
+      &trans     &sk LSHFT  &sk LALT   &kp TAB    &sk LGUI   &trans       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LS(SQT) &trans
 // ╰──────────┴──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────────┴──────────┴──────────┼──────────┴──────────┴──────────╯
 //                                  |          |          |          | |  RETURN  |          |          |
                                        &trans     &trans     &trans       &kp RET    &trans     &trans
