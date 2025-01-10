@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-unless-interrupted";
     tapping-term-ms = <100>;
 };
 
 &sk {
-      release-after-ms = <400>;
+      release-after-ms = <300>;
       quick-release;
 };
 
@@ -33,14 +33,14 @@
 
             esc {
                   bindings = <&kp ESC>;
-                  timeout-ms = <60>;
+                  timeout-ms = <75>;
                   layers = <0>;
                   key-positions = <15 16>;
             };
 
             bksp {
                   bindings = <&kp BACKSPACE>;
-                  timeout-ms = <60>;
+                  timeout-ms = <75>;
                   layers = <0>;
                   key-positions = <19 20>;
             };
