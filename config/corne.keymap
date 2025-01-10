@@ -9,11 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&mt {
-    flavor = "tap-unless-interrupted";
-    tapping-term-ms = <300>;
-};
-
 &sk {
       release-after-ms = <300>;
       quick-release;
@@ -26,6 +21,17 @@
                         if-layers = <1 2>;
                         then-layer = <3>;
                   };
+      };
+
+      behaviors {
+            ht: hold_tap {
+                  compatible = "zmk,behavior-hold-tap";
+                  #binding-cells = <2>;
+                  flavor = "tap-unless-interrupted";
+                  tapping-term-ms = <125>;
+                  require-prior-idle-ms = <300>;
+                  bindings = <&kp>, <&kp>;
+            };
       };
 
       combos {
@@ -56,10 +62,10 @@
       &trans     &kp Q      &kp W      &kp E      &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // |          |  A(CTRL) |  S       |  D(ESC1) |  F(ESC2) |  G       | |  H       |  J(BKSP1)|  K(BKSP2)|  L       |  : ;     |          |
-      &trans     &mt LCTRL A &kp S     &kp D      &kp F      &kp G        &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
+      &trans     &ht LCTRL A &kp S     &kp D      &kp F      &kp G        &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-// |          |  Z(SHFT) |  X       |  C       |  V       |  B       | |  N       |  M       |  , <     |  . >     |  / ?     |          |
-      &trans     &mt LSHFT Z &kp X     &kp C      &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
+// |          |  Z(SHFT) |  X       |  C       |  V       |  B       | |  N       |  M       |  , <     |  . >     |  /?(SHFT)|          |
+      &trans     &ht LSHFT Z &kp X     &kp C      &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT    &ht LSHFT FSLH   &trans
 // ╰──────────┴──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────────┴──────────┴──────────┼──────────┴──────────┴──────────╯
 //                                  |          |  LY1     |  SPC     | |  RETURN  |  LY2     |          |
                                        &trans     &mo 1      &kp SPACE    &kp RET    &mo 2      &trans
@@ -172,7 +178,7 @@
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 // |          |  A(CTRL) |  S       |  D(ESC1) |  F(ESC2) |  G       | |  H       |  J(BKSP1)|  K(BKSP2)|  L       |  : ;     |          |
 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-// |          |  Z(SHFT) |  X       |  C       |  V       |  B       | |  N       |  M       |  , <     |  . >     |  / ?     |          |
+// |          |  Z(SHFT) |  X       |  C       |  V       |  B       | |  N       |  M       |  , <     |  . >     |  /?(SHFT)|          |
 // ╰──────────┴──────────┴──────────┴──────────┼──────────┼──────────┤ ├──────────┴──────────┴──────────┼──────────┴──────────┴──────────╯
 //                                  |          |  LY1     |  SPC     | |  RETURN  |  LY2     |          |
 //                                  ╰──────────┴──────────┴──────────╯ ╰──────────┴──────────┴──────────╯
