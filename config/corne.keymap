@@ -27,9 +27,9 @@
             ht: hold_tap {
                   compatible = "zmk,behavior-hold-tap";
                   #binding-cells = <2>;
-                  flavor = "tap-unless-interrupted";
-                  tapping-term-ms = <150>;
-                  require-prior-idle-ms = <200>;
+                  flavor = "tap-preferred";
+                  tapping-term-ms = <225>;
+                  require-prior-idle-ms = <125>;
                   bindings = <&kp>, <&kp>;
             };
       };
